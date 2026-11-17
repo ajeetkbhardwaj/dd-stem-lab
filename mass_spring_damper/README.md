@@ -197,10 +197,7 @@ Report:
 For the step input $u(t)=10$ for $t\geq0$, compute the steady-state displacement:
 
 $$
-x(t)
-= 
-
-\frac{u_{\text{ss}}}{k}.
+x_{ss}(t) = \frac{u_{ss}}{k}.
 $$
 
 Explain why:
@@ -212,17 +209,7 @@ $$
 For the underdamped case, derive or state the analytical step response:
 
 $$
-x(t)
-= 
-
-x_{\text{ss}}
-\left[
-1-
-\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}
-\sin\left(
-\omega_d t+\phi
-\right)
-\right],
+x(t) = x_{ss}\left[1 - \frac{e^{-\zeta\omega_n t}}{\sqrt{1-\zeta^2}}\sin\left(\omega_d t + \phi\right)\right],
 $$
 
 where:
@@ -275,25 +262,13 @@ $$
 For each method and step size, compute:
 
 $$
- x
-= 
-
-\sqrt{
-\frac{1}{N}
-\sum_{i=1}^{N}
-\left(x_{\text{method}}(t_i)-x_{\text{reference}}(t_i)\right)^2
-}.
+\mathrm{RMSE}_x = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\left(x_{\text{method}}(t_i)-x_{\text{ref}}(t_i)\right)^2}.
 $$
 
 Also compute:
 
 $$
- x
-= 
-
-\frac{1}{N}
-\sum_{i=1}^{N}
-|x_{\text{method}}(t_i)-x_{\text{reference}}(t_i)|.
+\mathrm{MAE}_x = \frac{1}{N}\sum_{i=1}^{N}\left|x_{\text{method}}(t_i)-x_{\text{ref}}(t_i)\right|.
 $$
 
 ### Part F: Required figures

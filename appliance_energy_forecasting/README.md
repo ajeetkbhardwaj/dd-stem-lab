@@ -30,11 +30,7 @@ $$
 Build one-step-ahead forecasting models:
 
 $$
-\hat_
-= 
-
-f_\theta
-(y_k,y_{k-1},\ldots,y_{k-L+1},z_k,z_{k-1},\ldots,z_{k-L+1}),
+\hat{y}_{k+1} = f_\theta(y_k, y_{k-1}, \ldots, y_{k-L+1}, z_k, z_{k-1}, \ldots, z_{k-L+1}),
 $$
 
 where $z_k$ contains observed exogenous variables such as room temperature, humidity, outdoor weather, lighting, and cyclic time features.
@@ -177,35 +173,19 @@ For the gradient-boosted model:
 Compute the following metrics for each model on the test set:
 
 $$
-= 
-
-\frac{1}{N}\sum_{k=1}^{N}|y_k-\hat{y}_k|,
+\mathrm{MAE} = \frac{1}{N}\sum_{k=1}^{N}\left|y_k - \hat{y}_k\right|,
 $$
 
 $$
- =
-
-\sqrt{
-\frac{1}{N}
-\sum_{k=1}^{N}(y_k-\hat{y}_k)^2
-},
+\mathrm{RMSE} = \sqrt{\frac{1}{N}\sum_{k=1}^{N}\left(y_k - \hat{y}_k\right)^2},
 $$
 
 $$
-R^2
-= 
-
-1-
-\frac{\sum_{k=1}^{N}(y_k-\hat{y}_k)^2}
-{\sum_{k=1}^{N}(y_k-\bar{y})^2},
+R^2 = 1 - \frac{\sum_{k=1}^{N}\left(y_k - \hat{y}_k\right)^2}{\sum_{k=1}^{N}\left(y_k - \bar{y}\right)^2},
 $$
 
 $$
-\text
-= 
-
-\frac{\text{MAE}_{\text{model}}}
-{\text{MAE}_{\text{persistence}}}.
+\mathrm{MASE} = \frac{\mathrm{MAE}_{\text{model}}}{\mathrm{MAE}_{\text{persistence}}}.
 $$
 
 Also compute:

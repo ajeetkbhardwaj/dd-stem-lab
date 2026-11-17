@@ -138,19 +138,17 @@ $$
 Implement the discretization using the matrix exponential:
 
 $$
-\begin
-A_d&B_d\\
-0&I
-\end
-= 
-
-\exp
-\left[
 \begin{bmatrix}
-A&B\\
-0&0
-\end{bmatrix}T_s
-\right].
+A_d & B_d\\
+0 & I
+\end{bmatrix}
+=
+\exp\!\left(
+\begin{bmatrix}
+A & B\\
+0 & 0
+\end{bmatrix} T_s
+\right).
 $$
 
 Verify that:
@@ -240,10 +238,7 @@ Conclude that the system is fully observable and that velocity can be estimated 
 Design a continuous-time Luenberger observer:
 
 $$
-\dot}
-=====
-
-A\hat{x}+Bu+L(y-C\hat{x}).
+\dot{\hat{x}} = A\hat{x} + Bu + L(y - C\hat{x}).
 $$
 
 The observer error is:
@@ -287,45 +282,25 @@ Implement the discrete-time Kalman filter:
 Prediction:
 
 $$
-\hat_
-=====
-
-A_d\hat{x}_{k-1|k-1}
-+
-B_du_{k-1},
+\hat{x}_{k|k-1} = A_d\hat{x}_{k-1|k-1} + B_d u_{k-1},
 $$
 
 $$
-P_
-==
-
-A_dP_{k-1|k-1}A_d^T+Q.
+P_{k|k-1} = A_d P_{k-1|k-1} A_d^T + Q.
 $$
 
 Update:
 
 $$
-K_k
-===
-
-P_{k|k-1}C^T
-(CP_{k|k-1}C^T+R)^{-1},
+K_k = P_{k|k-1} C^T \left(C P_{k|k-1} C^T + R\right)^{-1},
 $$
 
 $$
-\hat_
-=====
-
-\hat{x}_{k|k-1}
-+
-K_k(y_k-C\hat{x}_{k|k-1}),
+\hat{x}_{k|k} = \hat{x}_{k|k-1} + K_k\left(y_k - C\hat{x}_{k|k-1}\right),
 $$
 
 $$
-P_
-==
-
-(I-K_kC)P_{k|k-1}.
+P_{k|k} = (I - K_k C) P_{k|k-1}.
 $$
 
 Use initial conditions:
@@ -345,23 +320,11 @@ $$
 For both observer and Kalman filter, compute:
 
 $$
-\text_}
-=======
-
-\sqrt{
-\frac{1}{N}
-\sum_{k=1}^{N}
-(\dot{x}_k-\hat{\dot{x}}_k)^2
-},
+\mathrm{RMSE}_{\dot{x}} = \sqrt{\frac{1}{N}\sum_{k=1}^{N}\left(\dot{x}_k - \hat{\dot{x}}_k\right)^2},
 $$
 
 $$
-\text_}
-=======
-
-\frac{1}{N}
-\sum_{k=1}^{N}
-|\dot{x}_k-\hat{\dot{x}}_k|.
+\mathrm{MAE}_{\dot{x}} = \frac{1}{N}\sum_{k=1}^{N}\left|\dot{x}_k - \hat{\dot{x}}_k\right|.
 $$
 
 Also compute:

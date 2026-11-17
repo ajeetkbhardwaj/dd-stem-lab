@@ -90,12 +90,7 @@ Assume that only the angular position $\theta(t)$ is measured by a digital encod
 Generate measurements at sampling period $T_s$:
 
 $$
-\theta[k]
-= 
-
-\theta(t_k)+v_k,
-\qquad
-t_k=kT_s,
+\theta[k] = \theta(t_k) + v_k, \qquad t_k = kT_s,
 $$
 
 where:
@@ -190,11 +185,7 @@ For the undamped case, set $b=0$ and $\tau(t)=0$.
 Compute total mechanical energy:
 
 $$
-E(t)
-= 
-\frac{1}{2}mL^2\dot{\theta}^2
-+
-mgL(1-\cos\theta).
+E(t) = \frac{1}{2}mL^2\dot{\theta}^2 + mgL(1-\cos\theta).
 $$
 
 Plot energy versus time for:

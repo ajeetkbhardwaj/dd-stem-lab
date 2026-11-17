@@ -137,15 +137,7 @@ $$
 Compute eigenvalues:
 
 $$
-\lambda_
-= 
-
--\frac{b}{2mL^2}
-\pm
-\sqrt{
-\left(\frac{b}{2mL^2}\right)^2
--\frac{g}{L}
-}.
+\lambda_{1,2} = -\frac{b}{2mL^2} \pm \sqrt{\left(\frac{b}{2mL^2}\right)^2 - \frac{g}{L}}.
 $$
 
 Classify the equilibrium for each damping value:
@@ -180,12 +172,7 @@ Show that one eigenvalue has positive real part for $b\geq0$, so the upright equ
 For zero damping and zero torque, derive total mechanical energy:
 
 $$
-E(\theta,\dot)
-= 
-
-\frac{1}{2}mL^2\dot{\theta}^2
-+
-mgL(1-\cos\theta).
+E(\theta,\dot{\theta}) = \frac{1}{2}mL^2\dot{\theta}^2 + mgL(1-\cos\theta).
 $$
 
 Show that:
@@ -199,11 +186,7 @@ when $b=0$.
 For $b>0$, show:
 
 $$
-\frac
-= 
-
--b\dot{\theta}^2
-\leq0.
+\frac{dE}{dt} = -b\dot{\theta}^2 \le 0.
 $$
 
 Interpret this result:
@@ -291,28 +274,16 @@ Compute and report:
 
 ### Part G: Linear versus nonlinear model
 
-Compare:
+Compare the linearized model:
 
 $$
-\ddot
-+
-\frac\dot
-+
-\frac\theta
-===========
-
-0
+\ddot{\theta} + \frac{b}{mL^2}\dot{\theta} + \frac{g}{L}\theta = 0
 $$
 
-with:
+with the nonlinear model:
 
 $$
-\ddot
-+
-\frac\dot
-+
-\frac\sin\theta
-===============
+\ddot{\theta} + \frac{b}{mL^2}\dot{\theta} + \frac{g}{L}\sin\theta = 0.
 $$
 
 Use initial angles:
@@ -324,14 +295,7 @@ $$
 For each initial angle, compute the error:
 
 $$
-\text_\theta
-============
-
-\sqrt{
-\frac{1}{N}
-\sum_{i=1}^{N}
-\left(\theta_{\text{linear}}(t_i)-\theta_{\text{nonlinear}}(t_i)\right)^2
-}.
+\mathrm{RMSE}_\theta = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\left(\theta_{\text{linear}}(t_i)-\theta_{\text{nonlinear}}(t_i)\right)^2}.
 $$
 
 Plot RMSE versus initial angle.

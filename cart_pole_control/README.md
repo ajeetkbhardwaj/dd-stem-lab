@@ -13,25 +13,11 @@ A cart of mass $M$ moves horizontally under force $u(t)$. A pendulum of mass $m_
 Use nonlinear equations of motion:
 
 $$
-(M+m)\ddot
-+
-m_p l\ddot\cos\theta
---------------------
-
-m_pl\dot^2\sin\theta
-= 
-
-u,
+(M+m_p)\ddot{x} + m_p l\ddot{\theta}\cos\theta - m_p l\dot{\theta}^2\sin\theta = u,
 $$
 
 $$
-l\ddot
-+
-\ddot\cos\theta
----------------
-
-g\sin\theta
-=
+l\ddot{\theta} + \ddot{x}\cos\theta - g\sin\theta = 0.
 $$
 
 Use parameters:
@@ -183,10 +169,7 @@ $$
 Linearize:
 
 $$
-\delta\dot
-==========
-
-A\delta x+B\delta u.
+\delta\dot{x} = A\delta x + B\delta u.
 $$
 
 Compute:
@@ -244,14 +227,7 @@ $$
 Design a PID controller for pendulum angle:
 
 $$
-u_}(t)
-======
-
-K_p e_\theta(t)
-+
-K_i\int_0^te_\theta(\tau)d\tau
-+
-K_d\dot{e}_\theta(t),
+u_{\mathrm{PID}}(t) = K_p e_\theta(t) + K_i\int_0^t e_\theta(\tau)\,d\tau + K_d\dot{e}_\theta(t),
 $$
 
 where:
