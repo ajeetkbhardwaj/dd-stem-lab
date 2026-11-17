@@ -1,0 +1,40 @@
+{
+    "Low Q Low R": {
+        "KF_Position RMSE": 0.00469883955989616,
+        "KF_Velocity RMSE": 0.14367519613750904,
+        "KF_Velocity MAE": 0.016181097062790282,
+        "KF_Max Velocity Error": 3.7550807973975227,
+        "KF_Velocity Bias": -0.0006628605018947209,
+        "KF_Convergence Time (s)": 0.22
+    },
+    "Low Q High R": {
+        "KF_Position RMSE": 0.036115562255968105,
+        "KF_Velocity RMSE": 0.38835648340295703,
+        "KF_Velocity MAE": 0.05607269000206682,
+        "KF_Max Velocity Error": 7.318847039288174,
+        "KF_Velocity Bias": 0.024077835344150176,
+        "KF_Convergence Time (s)": 1.68,
+        "Obs_Position RMSE": 0.2344800802307329,
+        "Obs_Velocity RMSE": 0.5264888763879871,
+        "Obs_Velocity MAE": 0.42221035403504237,
+        "Obs_Max Velocity Error": 1.6002138125718417,
+        "Obs_Velocity Bias": -0.04515815922618572,
+        "Obs_Convergence Time (s)": Infinity
+    },
+    "High Q Low R": {
+        "KF_Position RMSE": 0.024122375189054884,
+        "KF_Velocity RMSE": 0.34871894385900837,
+        "KF_Velocity MAE": 0.2543301214799394,
+        "KF_Max Velocity Error": 3.866114572056112,
+        "KF_Velocity Bias": -0.0007648257466209535,
+        "KF_Convergence Time (s)": Infinity
+    },
+    "High Q High R": {
+        "KF_Position RMSE": 0.0947823263240159,
+        "KF_Velocity RMSE": 0.5818617744212778,
+        "KF_Velocity MAE": 0.3636506147926187,
+        "KF_Max Velocity Error": 7.424264522686181,
+        "KF_Velocity Bias": 0.004219753022386683,
+        "KF_Convergence Time (s)": Infinity
+    }
+}

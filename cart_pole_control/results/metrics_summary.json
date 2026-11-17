@@ -1,0 +1,72 @@
+{
+    "PID": {
+        "Settling Time (s)": Infinity,
+        "Max |theta| (rad)": 1.636755014318961,
+        "Max |x_cart| (m)": 1.165120598432861,
+        "Max |force| (N)": 20.0,
+        "Saturation %": 5.666666666666666,
+        "RMS force (N)": 4.8032781088905345,
+        "Failed (|theta|>pi/2)": true,
+        "RMSE theta (rad)": 1.5993933975703187
+    },
+    "LQR_Conservative": {
+        "Settling Time (s)": 0.16,
+        "Max |theta| (rad)": 0.1,
+        "Max |x_cart| (m)": 2.3978934504276106,
+        "Max |force| (N)": 2.5476972164764007,
+        "Saturation %": 0.0,
+        "RMS force (N)": 0.36370111854916065,
+        "Failed (|theta|>pi/2)": false,
+        "RMSE theta (rad)": 0.0249041712146397
+    },
+    "LQR_Baseline": {
+        "Settling Time (s)": 0.14,
+        "Max |theta| (rad)": 1.268295559165589,
+        "Max |x_cart| (m)": 58.47891877341042,
+        "Max |force| (N)": 20.0,
+        "Saturation %": 31.0,
+        "RMS force (N)": 11.87412657230894,
+        "Failed (|theta|>pi/2)": false,
+        "RMSE theta (rad)": 0.6648440257799728
+    },
+    "LQR_Aggressive": {
+        "Settling Time (s)": Infinity,
+        "Max |theta| (rad)": 1.4752591237476786,
+        "Max |x_cart| (m)": 153.46369915664803,
+        "Max |force| (N)": 20.0,
+        "Saturation %": 63.66666666666667,
+        "RMS force (N)": 16.237657392163108,
+        "Failed (|theta|>pi/2)": false,
+        "RMSE theta (rad)": 0.9087173400075357
+    },
+    "MPC_H10": {
+        "Settling Time (s)": 0.64,
+        "Max |theta| (rad)": 0.1,
+        "Max |x_cart| (m)": 0.14591389312230346,
+        "Max |force| (N)": 0.5824959488062865,
+        "Saturation %": 0.0,
+        "RMS force (N)": 0.14471852342915265,
+        "Failed (|theta|>pi/2)": false,
+        "RMSE theta (rad)": 0.02155314570196279
+    },
+    "MPC_H20": {
+        "Settling Time (s)": 0.16,
+        "Max |theta| (rad)": 0.1,
+        "Max |x_cart| (m)": 0.34915805622257085,
+        "Max |force| (N)": 1.9487430421657879,
+        "Saturation %": 0.0,
+        "RMS force (N)": 0.25113841760873723,
+        "Failed (|theta|>pi/2)": false,
+        "RMSE theta (rad)": 0.015177377963123578
+    },
+    "MPC_H30": {
+        "Settling Time (s)": 0.16,
+        "Max |theta| (rad)": 0.1,
+        "Max |x_cart| (m)": 0.8064879692591601,
+        "Max |force| (N)": 2.435674635351112,
+        "Saturation %": 0.0,
+        "RMS force (N)": 0.2785593365378579,
+        "Failed (|theta|>pi/2)": false,
+        "RMSE theta (rad)": 0.014438114254369574
+    }
+}
